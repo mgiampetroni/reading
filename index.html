@@ -173,6 +173,36 @@
     }
 
     /* --- FOOTER --- */
+    .about-section {
+      padding: 2.5rem 0;
+    }
+
+    .about-text {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.7;
+      max-width: 500px;
+      margin-bottom: 1.2rem;
+    }
+
+    .about-links {
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    .about-links a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .about-links a:hover { color: var(--text); }
+
+    .about-sep {
+      color: var(--muted);
+      margin: 0 0.3rem;
+    }
+
     footer {
       margin-top: 3rem;
       padding-top: 2rem;
@@ -196,8 +226,9 @@
   <p class="intro">Things I'm thinking about</p>
 
   <nav class="tabs">
-    <button class="tab active" data-tab="weekly">Weekly Articles</button>
+    <button class="tab active" data-tab="weekly">This Week's Reading</button>
     <button class="tab" data-tab="books">Recommended Books</button>
+    <button class="tab" data-tab="about">About</button>
   </nav>
 
   <!-- ==================== WEEKLY TAB ==================== -->
@@ -208,6 +239,34 @@
          block, paste it below this comment, and update
          the date and entries. Most recent week goes first.
          ============================================ -->
+
+    <section class="week">
+      <p class="week-date">March 29, 2026</p>
+
+      <article class="entry">
+        <h2 class="entry-title"><a href="https://investing101.substack.com/p/the-techno-solutionist-commitment">The Techno-Solutionist Commitment</a></h2>
+        <p class="entry-source">Kyle Harrison · Investing 101</p>
+        <p class="entry-note">Solutionism as a commitment rather than a temperament. Harrison makes the case that neither blind optimism nor doomerism is sufficient. The obligation is to identify problems clearly and engineer targeted solutions. Progress requires active participation, not passive expectation that things will improve on their own.</p>
+      </article>
+
+      <article class="entry">
+        <h2 class="entry-title"><a href="https://cloudedjudgement.substack.com/p/clouded-judgement-3626-get-in-the">Get in the Token Path</a></h2>
+        <p class="entry-source">Jamin Ball · Clouded Judgement</p>
+        <p class="entry-note">A thought-provoking framework for where AI business models are heading. The core claim is that tokens are becoming the consumption primitive of the AI era the same way compute cycles were for cloud. The credit abstraction layer is the most interesting angle: companies can manage shifting model complexity underneath without exposing it to customers, selling outcomes rather than raw compute.</p>
+      </article>
+
+      <article class="entry">
+        <h2 class="entry-title"><a href="https://twitter.com/AndrewCurran_/status/2037967531630367218">Anthropic Mythos and the Next Model Leap</a></h2>
+        <p class="entry-source">Andrew Curran · X</p>
+        <p class="entry-note">A compelling synthesis of the Anthropic Mythos rumors and their second-order implications. The most provocative claim: if very large training runs become essential to staying competitive, frontier intelligence may become too expensive for most of humanity to afford. The strategic implications for compute, energy, and the widening gap between frontier labs and everyone else are worth watching closely.</p>
+      </article>
+
+      <article class="entry">
+        <h2 class="entry-title"><a href="#">Hardball</a></h2>
+        <p class="entry-source">George Stalk & Rob Lachenauer · Book</p>
+        <p class="entry-note">A case for relentlessness in competitive strategy. The central argument is that competitive advantage becomes decisive advantage only through sustained, aggressive execution. Some of the case studies feel dated, but the underlying framework of turning advantages into insurmountable leads remains relevant.</p>
+      </article>
+    </section>
 
     <section class="week">
       <p class="week-date">March 22, 2026</p>
@@ -362,7 +421,21 @@
 
   </div>
 
-  <footer><a href="https://x.com/Matthew_Geo" style="color: var(--muted); text-decoration: none; transition: color 0.15s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">Matthew</a> · New York City</footer>
+  <!-- ==================== ABOUT TAB ==================== -->
+  <div id="about" class="tab-content">
+
+    <section class="about-section">
+      <p class="about-text">Matthew Giampetroni is a generalist early-stage investor based in New York City.</p>
+      <p class="about-links">
+        <a href="https://www.linkedin.com/in/matthew-giampetroni/" target="_blank">LinkedIn</a>
+        <span class="about-sep">·</span>
+        <a href="https://x.com/Matthew_Geo" target="_blank">X</a>
+        <span class="about-sep">·</span>
+        <a href="mailto:mgiampetroni14@gmail.com">mgiampetroni14@gmail.com</a>
+      </p>
+    </section>
+
+  </div>
 
   <script>
     document.querySelectorAll('.tab').forEach(tab => {
